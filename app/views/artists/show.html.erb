@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
+<br>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <%= fa_icon 'user' %> <%= @artist.name %>
+  </div>
+  <div class="card-body">
+		<p class="mb-0">
+			<em>
+		  	<%= @artist.description %>
+			</em>
+		</p>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <%= fa_icon 'music' %> All his works
+  </div>
+  <div class="card-body">
+		
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @artist.description %>
-</p>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Edit', edit_artist_path(@artist) %> 

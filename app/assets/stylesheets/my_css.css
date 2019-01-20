@@ -1,0 +1,17 @@
+html, body 
+{    
+ 	height: 100%; 
+}
+
+.header
+{
+	font-family: 'Pacifico', cursive; 
+	display: inline-block;" 
+	color: white;
+	text-shadow: 2px 2px #dd56f8;
+}
+
+.center
+{
+	margin: 0 auto;
+}

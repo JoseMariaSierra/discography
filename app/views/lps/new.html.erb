@@ -1,8 +1,8 @@
 <div class="card">
   <div class="card-header bg-purple text-white">
-    <h3 class="header"> <%= fa_icon 'plus' %> Add a new artist </h3>
+    <%= fa_icon 'plus' %> Add a new LP
   </div>
   <div class="card-body">
-    <%= render 'form', artist: @artist %>
+    <%= render 'form', artist: @artist, lp: @lp %>
   </div>
 </div>

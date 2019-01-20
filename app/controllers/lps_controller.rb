@@ -1,10 +1,11 @@
-class LPsController < ApplicationController
+class LpsController < ApplicationController
   before_action :set_lp, only: [:show, :edit, :update, :destroy]
+  before_action :set_artist
 
   # GET /lps
   # GET /lps.json
   def index
-    @lps = Lp.all
+    @lps = @artist.lps.all
   end
 
   # GET /lps/1
@@ -14,7 +15,7 @@ class LPsController < ApplicationController
 
   # GET /lps/new
   def new
-    @lp = Lp.new
+    @lp = @artist.lps.new
   end
 
   # GET /lps/1/edit
@@ -24,15 +25,13 @@ class LPsController < ApplicationController
   # POST /lps
   # POST /lps.json
   def create
-    @lp = Lp.new(lp_params)
+    @lp = @artist.lps.new(lp_params)
 
     respond_to do |format|
       if @lp.save
-        format.html { redirect_to @lp, notice: 'Lp was successfully created.' }
-        format.json { render :show, status: :created, location: @lp }
+        format.html { redirect_to artist_lps_url, notice: 'Lp was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @lp.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -42,11 +41,9 @@ class LPsController < ApplicationController
   def update
     respond_to do |format|
       if @lp.update(lp_params)
-        format.html { redirect_to @lp, notice: 'Lp was successfully updated.' }
-        format.json { render :show, status: :ok, location: @lp }
+        format.html { redirect_to artist_lps_url, notice: 'Lp was successfully updated.' }
       else
         format.html { render :edit }
-        format.json { render json: @lp.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,8 +53,7 @@ class LPsController < ApplicationController
   def destroy
     @lp.destroy
     respond_to do |format|
-      format.html { redirect_to lps_url, notice: 'Lp was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to artist_lps_url, notice: 'Lp was successfully destroyed.' }
     end
   end
 
@@ -65,6 +61,10 @@ class LPsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_lp
       @lp = Lp.find(params[:id])
+    end
+
+    def set_artist
+      @artist = Artist.find(params[:artist_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

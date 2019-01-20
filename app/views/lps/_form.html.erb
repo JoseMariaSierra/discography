@@ -1,0 +1,33 @@
+<%= form_with(model: [artist, lp], local: true) do |form| %>
+  <% if lp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lp.errors.count, "error") %> prohibited this lp from being saved:</h2>
+
+      <ul>
+      <% lp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Name</div>
+    </div>
+    <%= form.text_field :name, id: :lp_name, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Description</div>
+    </div>
+    <%= form.text_area :description, id: :lp_description, class: "form-control" %>
+  </div>
+
+  <%= form.hidden_field :artist_id, id: :lp_artist_id %>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-sm btn-purple" %>
+  </div>
+<% end %>

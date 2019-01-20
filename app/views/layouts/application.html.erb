@@ -6,9 +6,39 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   </head>
-
   <body>
-    <%= yield %>
+  	
+  	<div class="container card bg-faded height-100pc">
+	  	<header class="bg-purple">
+	  		<span>
+		  		<%= image_tag("header.png", height: "100px") %>
+		  		<h1 class="header text-white ">CodiTramuntana Music</h1>
+	  		</span>
+	  		<%= render '/nav/nav' %>
+	  	</header>
+      <% if notice %>
+        <div class="alert alert-success alert-dismissible fade show" id="" role="alert">
+          <%= notice %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= alert %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>        
+      <% end %>
+	  	<%= yield %>
+	  </div>
+	  <div class="clear"></div>
+		<%= render "nav/footer"%>
   </body>
 </html>

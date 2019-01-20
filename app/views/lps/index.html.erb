@@ -18,14 +18,10 @@
         <td><%= lp.name %></td>
         <td><%= lp.description %></td>
         <td><%= lp.artist %></td>
-        <td><%= link_to 'Show', lp %></td>
-        <td><%= link_to 'Edit', edit_lp_path(lp) %></td>
-        <td><%= link_to 'Destroy', lp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>show</td>
+        <td>edit</td>
+        <td><%= link_to 'Destroy', [@artist, lp], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Lp', new_lp_path %>

@@ -1,29 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Artists</h1>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="header align-middle">All artists</h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
+  <div class="col-md-12">
     <% @artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.description %></td>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      
+      <div class="card">
+        <div class="card-header bg-purple text-white">
+          <%= fa_icon 'user' %> <%= artist.name %>
+
+          <%= link_to artist, class: "btn btn-sm btn-info" do %>
+            <%= fa_icon 'eye' %> Show
+          <% end %>
+
+          <%= link_to edit_artist_path(artist), class: "btn btn-sm btn-warning" do %>
+            <%= fa_icon 'edit' %> Edit
+          <% end %>
+
+          <%= link_to artist, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: 'Are you sure?' } do %>
+           <%= fa_icon 'trash' %> Destroy
+          <% end %>
+          <%= link_to new_artist_lp_path(artist, Lp.new), class: "btn btn-sm btn-success" do %>
+            <%= fa_icon 'plus' %> Add new LP
+          <% end %>
+        </div>
+        <div class="card-body">
+          <p class="mb-0">
+            <em>
+              <%= artist.description %>
+            </em>
+          </p>
+        </div>
+      </div>
+      <br>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
 
-<br>
 
-<%= link_to 'New Artist', new_artist_path %>
+
+
+
+

@@ -1,6 +1,8 @@
-<h1>Editing Artist</h1>
-
-<%= render 'form', artist: @artist %>
-
-<%= link_to 'Show', @artist %> |
-<%= link_to 'Back', artists_path %>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <h3 class="header"> <%= fa_icon 'edit' %> Editing artist </h3>
+  </div>
+  <div class="card-body">
+    <%= render 'form', artist: @artist %>
+  </div>
+</div>

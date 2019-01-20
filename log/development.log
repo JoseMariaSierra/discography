@@ -309,3 +309,2723 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 2463ms (Views: 2419.0ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-14 21:49:48 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (502.7ms)
+Completed 200 OK in 3369ms (Views: 3252.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:50:58 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-14 21:51:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (385.8ms)
+Completed 200 OK in 2025ms (Views: 2014.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-14 21:51:07 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (331.8ms)
+Completed 200 OK in 2001ms (Views: 1990.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-14 21:51:24 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yf9xJZDd/+tfUFWKN7DtLKYNMHTGP7b+FaYSkGT736aQ7Z+w6vr8TnRkuAHzh0xIk8Z0XaY1vHijqFLsRx6gZw==", "user"=>{"email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (392.8ms)
+Completed 200 OK in 4525ms (Views: 2251.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-14 21:51:42 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g5yjkh2mPFjzwA2oEvYcLgSSfoV98T3YNN1OjFg42zyqGlATpnQ87I6aYitEuRSjgtAg34KUKM+xibRoiUYv/w==", "user"=>{"email"=>"test@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@mail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (12.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test@mail.com"], ["encrypted_password", "$2a$11$1MMWUXj26caMPan7vtvjDuQlDiEUUeDp7eNl1TmX8K/zrSCrXUczS"], ["created_at", "2019-01-14 20:51:43.418542"], ["updated_at", "2019-01-14 20:51:43.418542"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1950ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:51:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `current=' for #<Class:0x46578d8>
+Did you mean?  current_scope=):
+  
+app/controllers/application_controller.rb:8:in `set_current_user'
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:52:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:53:34 +0100
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 66205ms (Views: 1149.4ms | ActiveRecord: 10.0ms)
+
+
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 990ms (Views: 765.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:54:20 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 200 OK in 912ms (Views: 812.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:55:36 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 200 OK in 1130ms (Views: 983.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:57:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 200 OK in 890ms (Views: 781.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:57:52 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 200 OK in 901ms (Views: 796.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:59:06 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 200 OK in 833ms (Views: 736.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:00:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 1124ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial nav/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jose/discography/app/views"
+  * "C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views"
+):
+    15: 	  	<%= render '/nav/nav' %>
+    16: 	  	<%= yield %>
+    17: 	  	<div class="clear"></div>
+    18: 			<%= render "nav/footer"%>
+    19: 	  </div>
+    20:   </body>
+    21: </html>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___967218396_83853960'
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:02:01 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+Completed 500 Internal Server Error in 1023ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial nav/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jose/discography/app/views"
+  * "C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views"
+):
+    15: 	  	<%= render '/nav/nav' %>
+    16: 	  	<%= yield %>
+    17: 	  	<div class="clear"></div>
+    18: 			<%= render "nav/footer"%>
+    19: 	  </div>
+    20:   </body>
+    21: </html>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___967218396_87256368'
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:02:56 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 965ms (Views: 873.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:04:35 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 959ms (Views: 857.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:05:52 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 956ms (Views: 856.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:10:32 +0100
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (7.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1665ms (Views: 1516.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:11:25 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 716ms (Views: 653.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:12:45 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1933ms (Views: 1834.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:13:00 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 979ms (Views: 870.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:14:30 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (12.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 4109ms (Views: 3848.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:15:35 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 995ms (Views: 909.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:16:10 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2391ms (Views: 2269.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:17:32 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1750ms (Views: 1610.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:18:43 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (11.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 5423ms (Views: 5082.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:19:51 +0100
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:19:51 +0100
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:19:51 +0100
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:19:51 +0100
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:19:54 +0100
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:24:00 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 126ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:24:50 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-14 22:24:52 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (1137.3ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 10366ms (Views: 10270.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 22:57:06 +0100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 148ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-14 22:58:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (903.7ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 9631ms (Views: 9539.8ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-14 22:59:41 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qoeFRdoV0wCltVeqsDbljEKJfdnVrszvKOffgV7p8rMCVNS8kRUImRjbZGBCr1qMcdcaNuRjNpXSQK7U+aHh9g==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jmsierra91@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 48ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qoeFRdoV0wCltVeqsDbljEKJfdnVrszvKOffgV7p8rMCVNS8kRUImRjbZGBCr1qMcdcaNuRjNpXSQK7U+aHh9g==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (215.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 2539ms (Views: 1679.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-14 22:59:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"70q6UNax1o81KCw7u93S76WBjqMmyUX07Sk1Sneodt5HmeupnbENFohGH/FJRG3vlt/pTBcEv44XjkQf0OBlmw==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jmsierra91@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"70q6UNax1o81KCw7u93S76WBjqMmyUX07Sk1Sneodt5HmeupnbENFohGH/FJRG3vlt/pTBcEv44XjkQf0OBlmw==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (392.7ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 2992ms (Views: 2307.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-14 23:00:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8VCqIHF2DcZ4Bnmlybs9dcEjxaFyHDnxcOmYQ20pqaJZg/vZOnbWX8VoSm87IoJ18n2iTkPRw4uKTukWymG65w==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jmsierra91@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20ms (ActiveRecord: 4.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8VCqIHF2DcZ4Bnmlybs9dcEjxaFyHDnxcOmYQ20pqaJZg/vZOnbWX8VoSm87IoJ18n2iTkPRw4uKTukWymG65w==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (375.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 3013ms (Views: 2319.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-14 23:00:37 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfjgoMC2HKRpT57EX6RBUZKmkzc6sA+4Yp9bLmqrNrD5K7FZi7bHPdQhrQ6tPf5Rofj02At99cKYOCp7zeMl9Q==", "user"=>{"email"=>"test@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1823ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:00:39 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1803ms (Views: 1635.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:01:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1120ms (Views: 989.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:02:08 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 860ms (Views: 767.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:05:57 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 824ms (Views: 737.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:06:25 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1180ms (Views: 1057.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:06:40 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1284ms (Views: 1176.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:07:03 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1337ms (Views: 1203.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:07:08 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 532ms (Views: 472.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:08:18 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1468ms (Views: 1338.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:09:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1000ms (Views: 906.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:10:38 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1549ms (Views: 1397.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:12:08 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1447ms (Views: 1295.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:13:02 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1293ms (Views: 1159.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:14:04 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1975ms (Views: 1843.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:14:49 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1408ms (Views: 1264.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:15:03 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1541ms (Views: 1387.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:15:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1540ms (Views: 1394.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:15:46 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1296ms (Views: 1140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-14 23:15:58 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (4.0ms)
+Completed 200 OK in 1528ms (Views: 1376.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:18:02 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 50ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-19 21:18:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (10.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (632.6ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 8051ms (Views: 7958.1ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-19 21:18:53 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AWleqQAEwC1K902Uic/ltvJwi5UGX8LZrgs36NJYqxfnFWnuZK7yXkeVeOrGzuNEQAsLznP7yAWsXWeNkudsQ==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jmsierra91@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 65ms (ActiveRecord: 2.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AWleqQAEwC1K902Uic/ltvJwi5UGX8LZrgs36NJYqxfnFWnuZK7yXkeVeOrGzuNEQAsLznP7yAWsXWeNkudsQ==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (279.8ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2641ms (Views: 1818.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-19 21:19:07 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6tWORzkNihs/n0/cxLHtJXvO57ygAQuEsFTJfYgtP3dBTH6aJJ8i0vOqxwk9jek+sQcJvc3Xm6/AXZA8HS/Aag==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "jmsierra91@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 17ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6tWORzkNihs/n0/cxLHtJXvO57ygAQuEsFTJfYgtP3dBTH6aJJ8i0vOqxwk9jek+sQcJvc3Xm6/AXZA8HS/Aag==", "user"=>{"email"=>"jmsierra91@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (466.7ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 3451ms (Views: 2724.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-19 21:19:27 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (282.8ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2057ms (Views: 2049.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-19 21:19:48 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpSb9c+WY1fvtuUZPMzjCn+RPqdbkDYtZZd1vBdTkJajHN5aa2acNIr4Joz2HYWRyBPW4JjbafRQAtwwtK3Jjw==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "tester@tester.com"], ["encrypted_password", "$2a$11$Il5Z0Mgbi5e6qiBB/C5gKu8Vk2garZjRQlYhHVqy2rpUrpni864zu"], ["created_at", "2019-01-19 20:19:49.525978"], ["updated_at", "2019-01-19 20:19:49.525978"]]
+  [1m[35m (36.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1907ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:19:50 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 999ms (Views: 874.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:40:19 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 3358ms (Views: 3188.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:41:40 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 983ms (Views: 876.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:42:17 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 2057ms (Views: 1913.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:43:03 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1036ms (Views: 922.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:45:47 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 962ms (Views: 868.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:46:05 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 901ms (Views: 798.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:46:30 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1106ms (Views: 991.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:46:58 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 976ms (Views: 860.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:49:16 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (0.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1168ms (Views: 1091.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:49:34 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1350ms (Views: 1251.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:50:06 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1455ms (Views: 1339.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:50:37 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1836ms (Views: 1699.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:51:39 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1316ms (Views: 1188.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:52:09 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1842ms (Views: 1719.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:52:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1458ms (Views: 1316.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:53:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1513ms (Views: 1408.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:56:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1700ms (Views: 1538.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:57:41 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1692ms (Views: 1489.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:58:05 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1319ms (Views: 1193.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:58:22 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1688ms (Views: 1524.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 21:58:43 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1165ms (Views: 1032.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:01:36 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (0.0ms)
+Completed 200 OK in 1230ms (Views: 1089.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:02:31 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1598ms (Views: 1429.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:03:03 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1598ms (Views: 1433.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:04:38 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1920ms (Views: 1750.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:09:32 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1684ms (Views: 1377.9ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:10:09 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1843ms (Views: 1677.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:10:17 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1944ms (Views: 1746.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:10:34 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1562ms (Views: 1395.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:11:04 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1422ms (Views: 1270.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-19 22:12:16 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1598ms (Views: 1335.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-19 22:15:14 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1732ms (Views: 1555.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:15:18 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1583ms (Views: 1395.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:16:04 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1552ms (Views: 1378.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:16:19 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1406ms (Views: 1241.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:16:34 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1404ms (Views: 1239.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:20:16 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1943.8ms)
+Completed 500 Internal Server Error in 3143ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `lps_path' for #<#<Class:0xbd7f2d8>:0xa04abe8>):
+    11:         <%= link_to "Artists", artists_path, class:"nav-link" %>
+    12:       </li>
+    13:       <li class="nav-item">
+    14:         <%= link_to "Main LPs", lps_path, class:"nav-link" %>
+    15:       </li>
+    16:     </ul>
+    17:     <span class="navbar-text">
+  
+app/views/nav/_nav.html.erb:14:in `_app_views_nav__nav_html_erb__590475941_57781968'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___963488837_84017808'
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:20:50 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (2073.7ms)
+Completed 500 Internal Server Error in 16440ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `l_ps_path' for #<#<Class:0xbd7f2d8>:0xa71ab78>):
+    11:         <%= link_to "Artists", artists_path, class:"nav-link" %>
+    12:       </li>
+    13:       <li class="nav-item">
+    14:         <%= link_to "Main LPs", l_ps_path, class:"nav-link" %>
+    15:       </li>
+    16:     </ul>
+    17:     <span class="navbar-text">
+  
+app/views/nav/_nav.html.erb:14:in `_app_views_nav__nav_html_erb__590475941_45024324'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___963488837_88834488'
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:21:48 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (1633.2ms)
+Completed 500 Internal Server Error in 2825ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `l_ps_path' for #<#<Class:0xbd7f2d8>:0xc6888c0>):
+    11:         <%= link_to "Artists", artists_path, class:"nav-link" %>
+    12:       </li>
+    13:       <li class="nav-item">
+    14:         <%= link_to "Main LPs", l_ps_path, class:"nav-link" %>
+    15:       </li>
+    16:     </ul>
+    17:     <span class="navbar-text">
+  
+app/views/nav/_nav.html.erb:14:in `_app_views_nav__nav_html_erb__590475941_85023972'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb___963488837_94269240'
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:34:26 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (16.0ms)
+  Rendered nav/_nav.html.erb (2278.6ms)
+Completed 500 Internal Server Error in 7422ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artists_new_path' for #<#<Class:0x5b0a238>:0x5af8028>
+Did you mean?  artists_path
+               artist_path
+               artist_lps_path
+               artist_lp_path):
+    11:         <%= link_to "All artists", artists_path, class:"nav-link" %>
+    12:       </li>
+    13:       <li class="nav-item">
+    14:         <%= link_to "Add an artists", artists_new_path, class:"nav-link" %>
+    15:       </li>
+    16:     </ul>
+    17:     <span class="navbar-text">
+  
+app/views/nav/_nav.html.erb:14:in `_app_views_nav__nav_html_erb__908472590_75281760'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__1007305790_47445636'
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:35:17 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (1768.4ms)
+Completed 500 Internal Server Error in 3117ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_artist' for #<#<Class:0x5b0a238>:0xa1b7a48>
+Did you mean?  new_artist_url):
+    11:         <%= link_to "All artists", artists_path, class:"nav-link" %>
+    12:       </li>
+    13:       <li class="nav-item">
+    14:         <%= link_to "Add an artists", new_artist, class:"nav-link" %>
+    15:       </li>
+    16:     </ul>
+    17:     <span class="navbar-text">
+  
+app/views/nav/_nav.html.erb:14:in `_app_views_nav__nav_html_erb__908472590_88418364'
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__1007305790_84781020'
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:36:17 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1446ms (Views: 1298.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 22:37:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1332ms (Views: 1187.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 23:18:04 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1667ms (Views: 1507.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:19:32 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (254.2ms)
+  Rendered artists/new.html.erb within layouts/application (405.1ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 2150ms (Views: 1841.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:20:50 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (8.0ms)
+  Rendered artists/new.html.erb within layouts/application (138.9ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1736ms (Views: 1560.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:21:27 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (11.0ms)
+  Rendered artists/new.html.erb within layouts/application (162.4ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1725ms (Views: 1559.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:21:43 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (11.0ms)
+  Rendered artists/new.html.erb within layouts/application (160.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1761ms (Views: 1558.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:22:07 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (14.0ms)
+  Rendered artists/new.html.erb within layouts/application (163.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1723ms (Views: 1558.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:25:38 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (9.0ms)
+  Rendered artists/new.html.erb within layouts/application (159.4ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1740ms (Views: 1579.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:26:21 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/new.html.erb within layouts/application (142.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1657ms (Views: 1467.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:28:25 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (600.9ms)
+Completed 500 Internal Server Error in 1287ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial artists/_plus, application/_plus with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Jose/discography/app/views"
+  * "C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/devise-4.5.0/app/views"
+):
+    3:     <%= fa_icon 'home' %> -  Add a new artist
+    4:   </div>
+    5:   <div class="card-body">
+    6:     <%= render 'plus', artist: @artist %>
+    7:   </div>
+    8: </div>
+  
+app/views/artists/new.html.erb:6:in `_app_views_artists_new_html_erb___667677298_109052136'
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:29:22 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (11.0ms)
+  Rendered artists/new.html.erb within layouts/application (154.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1831ms (Views: 1602.5ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-19 23:31:21 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RYsGTk7qZr91OLdeCnNJdeEcriFgTm1qIy/O/kld18TuEvaTU3jOdrkNP4vzT01uK9VAIA2Y/UFTJpe/3F8o2Q==", "artist"=>{"name"=>"Jose", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jose"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-19 22:31:21.826888"], ["updated_at", "2019-01-19 22:31:21.826888"]]
+  [1m[35m (45.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/1
+Completed 302 Found in 140ms (ActiveRecord: 54.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-19 23:31:21 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1258ms (Views: 982.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-19 23:31:38 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/edit.html.erb within layouts/application (109.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1679ms (Views: 1429.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-19 23:33:47 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1421ms (Views: 1266.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-19 23:33:55 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (13.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1824ms (Views: 1676.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-19 23:33:59 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (11.0ms)
+  Rendered artists/new.html.erb within layouts/application (202.9ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 2074ms (Views: 1899.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-19 23:34:12 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IHaR/cnBd7U9AFRR4L2zVk7Jh5JVavDb+sEBOGQhUz/xgnf9XprCpzja6cdEXc01Q6nU4yDir3K0wACLhApmNw==", "artist"=>{"name"=>"Maria", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maria"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-19 22:34:13.133848"], ["updated_at", "2019-01-19 22:34:13.133848"]]
+  [1m[35m (34.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/2
+Completed 302 Found in 88ms (ActiveRecord: 48.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:34:13 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1550ms (Views: 1379.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:34:34 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (4.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1769ms (Views: 1566.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:37:07 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1618ms (Views: 1422.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:42:04 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1543ms (Views: 1376.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:44:15 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1531ms (Views: 1364.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:46:45 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1648ms (Views: 1478.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:46:54 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1629ms (Views: 1435.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:47:09 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1576ms (Views: 1390.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-19 23:47:29 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (8.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1594ms (Views: 1373.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-19 23:48:26 +0100
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/l_ps/new" for 127.0.0.1 at 2019-01-19 23:48:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/artists/2/l_ps/new"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 00:31:34 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 00:36:25 +0100
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 00:40:37 +0100
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 00:40:56 +0100
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+Started GET "/" for 127.0.0.1 at 2019-01-20 00:41:05 +0100
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 3012ms (Views: 2786.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 00:50:10 +0100
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:13:38 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant LpsController):
+  
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.6.1) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.6.1) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:14:23 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `lps' for nil:NilClass):
+  
+app/controllers/lps_controller.rb:8:in `index'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:15:05 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 221ms (ActiveRecord: 16.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Lp with 'id'=2):
+  
+app/controllers/lps_controller.rb:72:in `set_artist'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:15:50 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Lp with 'id'=2):
+  
+app/controllers/lps_controller.rb:72:in `set_artist'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:16:30 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (857.9ms)
+  Rendered lps/new.html.erb within layouts/application (987.8ms)
+Completed 500 Internal Server Error in 2289ms (ActiveRecord: 21.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lps_path' for #<#<Class:0x9d52328>:0x9d51128>):
+    1: <%= form_with(model: lp, local: true) do |form| %>
+    2:   <% if lp.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(lp.errors.count, "error") %> prohibited this lp from being saved:</h2>
+  
+app/views/lps/_form.html.erb:1:in `_app_views_lps__form_html_erb__108919936_82542900'
+app/views/lps/new.html.erb:3:in `_app_views_lps_new_html_erb__447642527_82482612'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:18:03 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (11.0ms)
+  Rendered lps/new.html.erb within layouts/application (187.9ms)
+Completed 500 Internal Server Error in 1310ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (C:/Users/Jose/discography/app/views/lps/_form.html.erb:1: syntax error, unexpected ',', expecting =>
+...=  form_with(model: artist, lp, local: true) do |form| @outp...
+...                               ^
+C:/Users/Jose/discography/app/views/lps/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/lps/_form.html.erb:1: syntax error, unexpected ',', expecting =>
+app/views/lps/_form.html.erb:34: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/lps/new.html.erb:3:in `_app_views_lps_new_html_erb__447642527_57981024'
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:18:42 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (178.5ms)
+  Rendered lps/new.html.erb within layouts/application (312.4ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 3715ms (Views: 3540.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:20:44 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (18.0ms)
+  Rendered lps/new.html.erb within layouts/application (162.4ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1901ms (Views: 1725.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:22:16 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (12.0ms)
+  Rendered lps/new.html.erb within layouts/application (210.4ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1886ms (Views: 1670.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:22:27 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (15.0ms)
+  Rendered lps/new.html.erb within layouts/application (174.8ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1768ms (Views: 1601.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:22:56 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (94.9ms)
+  Rendered lps/new.html.erb within layouts/application (330.3ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 2038ms (Views: 1850.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:23:10 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (5.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (11.0ms)
+  Rendered lps/new.html.erb within layouts/application (172.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1792ms (Views: 1588.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:23:36 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (10.0ms)
+  Rendered lps/new.html.erb within layouts/application (138.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1609ms (Views: 1435.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:24:02 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (12.0ms)
+  Rendered lps/new.html.erb within layouts/application (160.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1739ms (Views: 1555.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/2/lps/new" for 127.0.0.1 at 2019-01-20 01:24:57 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (8.0ms)
+  Rendered lps/new.html.erb within layouts/application (136.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1522ms (Views: 1356.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:25:31 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gcamHOWPViR8152NgdggxiwP/9zX6wFQcK1VyexwbnMqX1bB+B3+7bDiFVh45CTd5sYR3bo9kXsApAyIeXKRbg==", "lp"=>{"name"=>"LP 1", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"2"}, "commit"=>"Create Lp", "artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 1"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 2], ["created_at", "2019-01-20 00:25:31.811267"], ["updated_at", "2019-01-20 00:25:31.811267"]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 2031ms (ActiveRecord: 47.0ms)
+
+
+  
+NoMethodError (undefined method `lp_url' for #<LpsController:0xbaf1a88>):
+  
+app/controllers/lps_controller.rb:32:in `block (2 levels) in create'
+app/controllers/lps_controller.rb:30:in `create'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:36:59 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered lps/index.html.erb within layouts/application (1043.7ms)
+Completed 500 Internal Server Error in 2303ms (ActiveRecord: 19.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lp_path' for #<#<Class:0x52b6f30>:0x52a4678>):
+    18:         <td><%= lp.name %></td>
+    19:         <td><%= lp.description %></td>
+    20:         <td><%= lp.artist %></td>
+    21:         <td><%= link_to 'Show', lp %></td>
+    22:         <td><%= link_to 'Edit', edit_lp_path(lp) %></td>
+    23:         <td><%= link_to 'Destroy', lp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/lps/index.html.erb:21:in `block in _app_views_lps_index_html_erb___772460456_43429296'
+app/views/lps/index.html.erb:16:in `_app_views_lps_index_html_erb___772460456_43429296'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:39:28 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered lps/index.html.erb within layouts/application (1201.6ms)
+Completed 500 Internal Server Error in 2459ms (ActiveRecord: 32.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lp_path' for #<#<Class:0x9a68690>:0x9a734a8>):
+    18:         <td><%= lp.name %></td>
+    19:         <td><%= lp.description %></td>
+    20:         <td><%= lp.artist %></td>
+    21:         <td><%= link_to 'Show', lp %></td>
+    22:         <td><%= link_to 'Edit', edit_lp_path(lp) %></td>
+    23:         <td><%= link_to 'Destroy', lp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+  
+app/views/lps/index.html.erb:21:in `block in _app_views_lps_index_html_erb___772460456_80954868'
+app/views/lps/index.html.erb:16:in `_app_views_lps_index_html_erb___772460456_80954868'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:40:38 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered lps/index.html.erb within layouts/application (1345.2ms)
+Completed 500 Internal Server Error in 2228ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lp_path' for #<#<Class:0x9a68690>:0x9420018>):
+    20:         <td><%= lp.artist %></td>
+    21:         <td>show</td>
+    22:         <td>edit</td>
+    23:         <td><%= link_to 'Destroy', lp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    24:       </tr>
+    25:     <% end %>
+    26:   </tbody>
+  
+app/views/lps/index.html.erb:23:in `block in _app_views_lps_index_html_erb___772460456_77660976'
+app/views/lps/index.html.erb:16:in `_app_views_lps_index_html_erb___772460456_77660976'
+Started GET "/artists/2/lps" for 127.0.0.1 at 2019-01-20 01:50:39 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered lps/index.html.erb within layouts/application (51.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 3747ms (Views: 3555.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 01:59:21 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1547ms (Views: 1380.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-20 01:59:39 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (182.8ms)
+  Rendered artists/new.html.erb within layouts/application (325.7ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1970ms (Views: 1790.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-20 02:00:32 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/new.html.erb within layouts/application (141.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1541ms (Views: 1396.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 02:00:38 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1532ms (Views: 1377.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:23:04 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (22.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1744ms (Views: 1580.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-20 02:23:31 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:23:33 +0100
+  Rendering artists/new.html.erb within layouts/application
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered artists/_form.html.erb (0.0ms)
+  Rendered artists/new.html.erb within layouts/application (297.9ms)
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (49.0ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 3709ms (Views: 3457.9ms | ActiveRecord: 2.0ms)
+
+
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 2615ms (Views: 2434.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:26:26 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (20.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1853ms (Views: 1689.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:27:43 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (18.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1597ms (Views: 1446.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:28:03 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (18.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2096ms (Views: 1893.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:29:01 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1609ms (Views: 1454.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:29:52 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 849ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (C:/Users/Jose/discography/app/views/artists/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "btn btn-sm btn-primary" style: "width: 30px;" );@output_bu...
+...                               ^):
+  
+app/views/artists/index.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:30:20 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (244.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 10058ms (Views: 6986.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:30:50 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (17.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1641ms (Views: 1470.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:30:57 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1536ms (Views: 1356.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:31:05 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1592ms (Views: 1375.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:32:35 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (16.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1534ms (Views: 1371.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:34:51 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (10.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1436ms (Views: 1210.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:36:00 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (13.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1340ms (Views: 1187.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:37:10 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2510ms (Views: 2350.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:37:40 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1573ms (Views: 1412.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:38:06 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1598ms (Views: 1371.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:38:30 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (18.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1511ms (Views: 1352.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:38:46 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (16.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1569ms (Views: 1391.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:39:25 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (13.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1442ms (Views: 1268.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:40:14 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1514ms (Views: 1338.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-20 02:40:43 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (12.0ms)
+  Rendered artists/edit.html.erb within layouts/application (430.3ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 2238ms (Views: 2019.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-20 02:41:19 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/edit.html.erb within layouts/application (153.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1804ms (Views: 1637.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-20 02:41:40 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (9.0ms)
+  Rendered artists/edit.html.erb within layouts/application (158.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1727ms (Views: 1527.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-20 02:41:56 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/edit.html.erb within layouts/application (147.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1711ms (Views: 1504.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2019-01-20 02:42:28 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (3.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (9.0ms)
+  Rendered artists/edit.html.erb within layouts/application (154.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1731ms (Views: 1532.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-20 02:42:33 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (6.0ms)
+  Rendered artists/new.html.erb within layouts/application (130.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (3.0ms)
+Completed 200 OK in 1762ms (Views: 1605.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 02:42:41 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1503ms (Views: 1347.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:42:51 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (17.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1571ms (Views: 1427.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:45:20 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 1003ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (C:/Users/Jose/discography/app/views/artists/index.html.erb:19: syntax error, unexpected tLABEL, expecting ')'
+...tist_lp_path(artist, lp) class: "btn btn-sm btn-success" } )...
+...                               ^
+C:/Users/Jose/discography/app/views/artists/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting ')'
+...ass: "btn btn-sm btn-success" } );@output_buffer.safe_append...
+...                               ^
+C:/Users/Jose/discography/app/views/artists/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+C:/Users/Jose/discography/app/views/artists/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Users/Jose/discography/app/views/artists/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/artists/index.html.erb:19: syntax error, unexpected tLABEL, expecting ')'
+app/views/artists/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/artists/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+app/views/artists/index.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/artists/index.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:45:59 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 4455ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (C:/Users/Jose/discography/app/views/artists/index.html.erb:19: syntax error, unexpected tLABEL, expecting ')'
+...tist_lp_path(artist, lp) class: "btn btn-sm btn-success" );@...
+...                               ^):
+  
+app/views/artists/index.html.erb:19: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:46:19 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (16310.7ms)
+Completed 500 Internal Server Error in 25332ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `lp' for #<#<Class:0x9da4120>:0x96169e0>
+Did you mean?  l):
+    16:           <%= link_to 'Show', artist, class: "btn btn-sm btn-info" %>
+    17:           <%= link_to 'Edit', edit_artist_path(artist), class: "btn btn-sm btn-warning" %>
+    18:           <%= link_to 'Destroy', artist, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: 'Are you sure?' } %>
+    19:           <%= link_to 'Add LP', new_artist_lp_path(artist, lp), class: "btn btn-sm btn-success" %>
+    20:         </div>
+    21:         <div class="card-body">
+    22:           <p class="mb-0">
+  
+app/views/artists/index.html.erb:19:in `block in _app_views_artists_index_html_erb__833773877_78767016'
+app/views/artists/index.html.erb:11:in `_app_views_artists_index_html_erb__833773877_78767016'
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:47:11 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (22.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 13170ms (Views: 10318.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:49:03 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1486ms (Views: 1326.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:49:20 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (21.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1711ms (Views: 1528.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 02:50:56 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (29.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (1.0ms)
+Completed 200 OK in 1621ms (Views: 1406.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/lps/new" for 127.0.0.1 at 2019-01-20 02:51:09 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (19.0ms)
+  Rendered lps/new.html.erb within layouts/application (142.9ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (2.0ms)
+Completed 200 OK in 1803ms (Views: 1550.5ms | ActiveRecord: 2.0ms)
+
+
