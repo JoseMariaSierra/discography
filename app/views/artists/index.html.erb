@@ -1,15 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<div class="row">
-  <div class="col-md-12">
-    <h1 class="header align-middle">All artists</h1>
+<br>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <span><h3 class="header"><%= fa_icon 'music' %> All artists</h3></span>
+  </div>
+  <div class="card-body">
+		<%= render 'artists/artist_list', artists: @artists %> 
   </div>
 </div>
-
-<%= render 'artists/artist_list', artists: @artists %>
-
-
-
-
-
-

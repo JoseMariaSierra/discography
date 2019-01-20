@@ -1,7 +1,7 @@
 <% lps.each do |lp| %>
   <div class="card">
     <div class="card-header bg-purple2 text-white">
-      <%= fa_icon 'play' %> &nbsp <%= lp.name %> - <%= lp.artist.name %> &nbsp <span class="badge badge-secondary badge-pill"><%= lp.created_at.to_s[0..10] %></span>
+      <%= fa_icon 'play' %> &nbsp <%= lp.name %> - <%= lp.artist.name %> &nbsp <span class="badge badge-light badge-pill"><%= lp.created_at.to_s[0..10] %></span>
 
       <%= link_to [lp.artist, lp], class: "btn btn-sm btn-success", style: "width: 100px; margin: 1px;" do %>
         <%= fa_icon 'eye' %> Show

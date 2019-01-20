@@ -4940,3 +4940,350 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 2346ms (Views: 2101.3ms | ActiveRecord: 6.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:49:20 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (14.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (26.0ms)
+  Rendered welcome/index.html.erb within layouts/application (337.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1813ms (Views: 1650.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:49:44 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (29.6ms)
+  Rendered welcome/index.html.erb within layouts/application (340.5ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1801ms (Views: 1637.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 04:50:09 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (22.0ms)
+  Rendered artists/index.html.erb within layouts/application (166.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1850ms (Views: 1679.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:50:26 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (13.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (31.0ms)
+  Rendered welcome/index.html.erb within layouts/application (363.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 2020ms (Views: 1824.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:51:27 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (28.0ms)
+  Rendered welcome/index.html.erb within layouts/application (325.6ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1669ms (Views: 1527.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:53:23 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (18.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (28.0ms)
+  Rendered welcome/index.html.erb within layouts/application (464.7ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 2707ms (Views: 2563.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:54:40 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (20.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (32.0ms)
+  Rendered welcome/index.html.erb within layouts/application (400.8ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 3291ms (Views: 3134.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:55:42 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (14.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (30.0ms)
+  Rendered welcome/index.html.erb within layouts/application (348.4ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 3225ms (Views: 3065.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:57:11 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (10.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (45.0ms)
+  Rendered welcome/index.html.erb within layouts/application (416.6ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 2754ms (Views: 2630.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 04:58:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (10.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (28.0ms)
+  Rendered welcome/index.html.erb within layouts/application (327.1ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1842ms (Views: 1692.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 05:00:15 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (15.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (32.0ms)
+  Rendered welcome/index.html.erb within layouts/application (372.2ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 2698ms (Views: 2497.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:00:39 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (17.0ms)
+  Rendered artists/index.html.erb within layouts/application (163.9ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+Completed 200 OK in 1916ms (Views: 1775.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/2" for 127.0.0.1 at 2019-01-20 05:00:43 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  Rendered lps/_lp_list.html.erb (23.0ms)
+  Rendered artists/show.html.erb within layouts/application (202.7ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 1655ms (Views: 1519.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:00:49 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (33.0ms)
+  Rendered artists/index.html.erb within layouts/application (190.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 1736ms (Views: 1605.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 05:00:53 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (15.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (21.0ms)
+  Rendered welcome/index.html.erb within layouts/application (401.8ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 2589ms (Views: 2389.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:01:09 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (19.0ms)
+  Rendered artists/index.html.erb within layouts/application (160.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1878ms (Views: 1710.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 05:01:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:01:14 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (182.9ms)
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendering artists/index.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2019-01-20 05:01:16 +0100
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered artists/_artist_list.html.erb (2119.7ms)
+Processing by WelcomeController#index as HTML
+  Rendered lps/_lp_list.html.erb (2254.5ms)
+  Rendered artists/index.html.erb within layouts/application (2421.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (3597.7ms)
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (21.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (80.0ms)
+  Rendered welcome/index.html.erb within layouts/application (594.8ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (36.0ms)
+Completed 200 OK in 7038ms (Views: 6878.7ms | ActiveRecord: 3.0ms)
+
+
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (33.0ms)
+Completed 200 OK in 8274ms (Views: 8010.3ms | ActiveRecord: 6.0ms)
+
+
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 3943ms (Views: 3554.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:02:34 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (14.0ms)
+  Rendered artists/index.html.erb within layouts/application (138.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1864ms (Views: 1515.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:02:37 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (5.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (29.0ms)
+  Rendered artists/index.html.erb within layouts/application (196.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1749ms (Views: 1600.7ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-20 05:02:51 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (24.0ms)
+  Rendered artists/index.html.erb within layouts/application (165.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1707ms (Views: 1542.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-20 05:03:01 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (10.0ms)
+  Rendered artists/new.html.erb within layouts/application (153.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1895ms (Views: 1683.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 05:03:05 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (28.0ms)
+  Rendered welcome/index.html.erb within layouts/application (354.8ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 2012ms (Views: 1851.5ms | ActiveRecord: 4.0ms)
+
+
