@@ -1,7 +1,10 @@
 <br>
 <div class="card">
   <div class="card-header bg-purple text-white">
-    <%= fa_icon 'user' %> <%= @artist.name %>
+    <h3 class="header"><%= fa_icon 'user' %> <%= @artist.name %></h3> &nbsp&nbsp
+    <span class="badge badge-info badge-pill">
+      <%= @artist.lps.count %> LPs stored
+    </span>
   </div>
   <div class="card-body">
 		<p class="mb-0">
@@ -9,16 +12,31 @@
 		  	<%= @artist.description %>
 			</em>
 		</p>
+    <br>
+    <%= link_to new_artist_lp_path(@artist, Lp.new), class: "btn btn-sm btn-info" do %>
+      <%= fa_icon 'plus' %> Add new LP
+    <% end %>
+    <%= link_to edit_artist_path(@artist), class: "btn btn-sm btn-warning" do %>
+      <%= fa_icon 'edit' %> Edit
+    <% end %> 
+    <%= link_to @artist, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: 'Are you sure?' } do %>
+     <%= fa_icon 'trash' %> Destroy
+    <% end %>
   </div>
 </div>
 <br>
-<div class="card">
-  <div class="card-header bg-purple text-white">
-    <%= fa_icon 'music' %> All his works
-  </div>
-  <div class="card-body">
-		
-  </div>
-</div>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> 
+<% if has_lps?(@artist) %>
+  <div class="card">
+    <div class="card-header bg-purple text-white">
+      <span><h3 class="header"><%= fa_icon 'music' %> All his works</h3></span>
+    </div>
+    <div class="card-body">
+  		<%= render 'lps/lp_list', lps: @artist.lps, artist: @artist %> 
+    </div>
+  </div>
+<% else %>
+    This artist does not have works yet
+  </div>
+<% end %>
+

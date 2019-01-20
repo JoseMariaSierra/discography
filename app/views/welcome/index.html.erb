@@ -1,13 +1,18 @@
-xxxxxxxxxxxx
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <span><h3 class="header"><%= fa_icon 'User' %> Last Artists stored</h3></span>
+  </div>
+  <div class="card-body">
+		<%= render 'artists/artist_list', artists: Artist.last(3) %> 
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <span><h3 class="header"><%= fa_icon 'music' %> Last LPs stored</h3></span>
+  </div>
+  <div class="card-body">
+		<%= render 'lps/lp_list', lps: Lp.last(3) %> 
+  </div>
+</div>

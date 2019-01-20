@@ -1,0 +1,27 @@
+<% lps.each do |lp| %>
+  <div class="card">
+    <div class="card-header bg-purple2 text-white">
+      <%= fa_icon 'play' %> &nbsp <%= lp.name %> - <%= lp.artist.name %> &nbsp <span class="badge badge-secondary badge-pill"><%= lp.created_at.to_s[0..10] %></span>
+
+      <%= link_to [lp.artist, lp], class: "btn btn-sm btn-success", style: "width: 100px; margin: 1px;" do %>
+        <%= fa_icon 'eye' %> Show
+      <% end %>
+      <%= link_to edit_artist_lp_path(lp.artist, lp), class: "btn btn-sm btn-warning", style: "width: 100px; margin: 1px;" do %>
+        <%= fa_icon 'edit' %> Edit
+      <% end %>
+      <%= link_to [lp.artist, lp], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger", style: "width: 100px; margin: 1px;" do %>
+        <%= fa_icon 'trash' %> Destroy
+      <% end %>
+    </div>
+    <div class="card-body">
+      <p class="mb-0">
+        <em>
+         <%= lp.description.truncate(300) %> %>
+        </em>
+      </p>
+    </div>
+  </div>
+  <br>
+<% end %>
+
+

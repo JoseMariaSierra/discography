@@ -1,17 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @lp.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @lp.description %>
-</p>
-
-<p>
-  <strong>Artist:</strong>
-  <%= @lp.artist %>
-</p>
-
+<br>
+<div class="card">
+  <div class="card-header bg-purple text-white">
+    <span><h3 class="header"><%= fa_icon 'music' %>&nbsp<%= @lp.name %> - <%= @lp.artist.name %></h3></span>
+  </div>
+  <div class="card-body">
+	  <%= @lp.description %>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-12">
+    <% artists.each do |artist| %>
+      
+      <div class="card">
+        <div class="card-header bg-purple2 text-white">
+          <%= fa_icon 'user' %> <%= artist.name %>
+
+          <%= link_to artist, class: "btn btn-sm btn-info" do %>
+            <%= fa_icon 'eye' %> Show
+          <% end %>
+
+          <%= link_to edit_artist_path(artist), class: "btn btn-sm btn-warning" do %>
+            <%= fa_icon 'edit' %> Edit
+          <% end %>
+
+          <%= link_to artist, method: :delete, class: "btn btn-sm btn-danger", data: { confirm: 'Are you sure?' } do %>
+           <%= fa_icon 'trash' %> Destroy
+          <% end %>
+          <%= link_to new_artist_lp_path(artist, Lp.new), class: "btn btn-sm btn-success" do %>
+            <%= fa_icon 'plus' %> Add new LP
+          <% end %>
+        </div>
+        <div class="card-body">
+          <p class="mb-0">
+            <em>
+              <%= artist.description.truncate(300) %>
+            </em>
+          </p>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </div>
+</div>
