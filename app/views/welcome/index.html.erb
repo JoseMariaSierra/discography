@@ -1,18 +1,21 @@
 <br>
 <div class="card">
   <div class="card-header bg-purple text-white">
-    <span><h3 class="header"><%= fa_icon 'User' %> Last Artists stored</h3></span>
+    <span><h3 class="header"><%= fa_icon 'user' %> &nbsp Last stored artists </h3></span>
   </div>
   <div class="card-body">
 		<%= render 'artists/artist_list', artists: Artist.last(3) %> 
+    <%= link_to "Show all artists", artists_path, class:"nav-link" %>
   </div>
 </div>
 
 <div class="card">
   <div class="card-header bg-purple text-white">
-    <span><h3 class="header"><%= fa_icon 'music' %> Last LPs stored</h3></span>
+    <span><h3 class="header"><%= fa_icon 'music' %> &nbsp Last stored LPs </h3></span>
   </div>
   <div class="card-body">
 		<%= render 'lps/lp_list', lps: Lp.last(3) %> 
+    <%= link_to "Show all LPs", lps_all_path, class:"nav-link" %>
   </div>
 </div>
+<br>

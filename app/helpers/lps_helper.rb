@@ -1,2 +1,2 @@
-module LPsHelper
+module LpsHelper
 end

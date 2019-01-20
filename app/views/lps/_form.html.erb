@@ -1,4 +1,4 @@
-<%= form_with(model: [artist, lp], local: true) do |form| %>
+<%= form_with(model: [lp.artist, lp], local: true) do |form| %>
   <% if lp.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(lp.errors.count, "error") %> prohibited this lp from being saved:</h2>
