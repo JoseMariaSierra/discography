@@ -4,11 +4,15 @@
       
       <span class="badge badge-dark badge-pill"> 
         <%= link_to [lp.artist, lp], class: "text-white" do %>
-          <%= fa_icon 'play' %> <strong>&nbsp <%= lp.name %> </strong> -
+          <%= fa_icon 'play' %> <strong>&nbsp <%= lp.name %> </strong>
         <% end %>
-        <%= link_to lp.artist.name, artist_path(lp.artist), class: "text-white" %>
       </span>
-      <span class="badge badge-light badge-pill"><%= lp.created_at.to_s[0..10] %></span>
+      <span class="badge badge-info badge-pill"> 
+        <%= link_to lp.artist.name, artist_path(lp.artist), class: "text-white" %>
+      </span>      
+      <span class="badge badge-light badge-pill">
+        <%= lp.created_at.to_s[0..10] %>
+      </span>
     </div>
     <div class="card-body">
       <p class="mb-0">

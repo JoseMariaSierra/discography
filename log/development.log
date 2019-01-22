@@ -6754,3 +6754,1667 @@ Processing by LpsController#edit as HTML
 Completed 200 OK in 1669ms (Views: 1503.1ms | ActiveRecord: 5.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-20 20:40:33 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (13.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (35.0ms)
+  Rendered welcome/index.html.erb within layouts/application (399.8ms)
+  Rendered nav/_nav.html.erb (10.9ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 2299ms (Views: 2129.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 20:43:34 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (31.0ms)
+  Rendered welcome/index.html.erb within layouts/application (381.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+Completed 200 OK in 2268ms (Views: 2101.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:02:51 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 118ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:03:46 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:03:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (9.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (598.6ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (24.0ms)
+Completed 200 OK in 8072ms (Views: 7990.1ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:07:05 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0o/HQFpKZkzw5fCvVSwJbPiEkQjCohQPkMIolMEaoYITl3+pqhj42C28iiVD7WdM6jJUzVAKAfIK/ZOG0q/Aeg==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2123ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:07:07 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (150.7ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (275.9ms)
+  Rendered welcome/index.html.erb within layouts/application (1024.2ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 2394ms (Views: 2241.1ms | ActiveRecord: 12.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:08:00 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SqqhojnVwL17k3Jv1mbgH34qlLcjwCNrAweDVJ9kdNuhOGYv8vD9Z1b3JYyFMk2APbfbDCS/hEzGPDIG+6CmRQ=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:08:00 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:08:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (71.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (5.0ms)
+Completed 200 OK in 817ms (Views: 814.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:08:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (69.0ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (5.0ms)
+Completed 200 OK in 779ms (Views: 776.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:08:17 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:08:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (102.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (6.0ms)
+Completed 200 OK in 1201ms (Views: 1198.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:08:27 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m2VOVB6NYPd8wd0Z764pmmiysRTjCjNM+f6y/VtXJmbHBiSpwZ2q7IxL5mTLJSZTFSYHmmqMW0vQWmDlwsMcPQ==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1752ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:08:29 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (7.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (18.0ms)
+  Rendered welcome/index.html.erb within layouts/application (178.9ms)
+  Rendered nav/_nav.html.erb (2.0ms)
+  Rendered nav/_footer.html.erb (6.0ms)
+Completed 200 OK in 998ms (Views: 908.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:13:59 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:14:02 +0100
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yz4S318jyMLoqOrKENP6GxU0GYcC2PSm9CEfhj8pipMQyTOMfnXHzOax8fV9NFYQ/GdBcgBzlWwJa3kO4dWIzg=="}
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  Rendered lps/_lp_list.html.erb (55.0ms)
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendered welcome/index.html.erb within layouts/application (713.6ms)
+Redirected to http://localhost:3000/
+Completed 302 Found in 84ms (ActiveRecord: 5.0ms)
+
+
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 2302ms (Views: 2144.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:14:03 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:14:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (195.9ms)
+  Rendered nav/_nav.html.erb (37.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1914ms (Views: 1910.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:14:42 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:14:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (169.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 1956ms (Views: 1950.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:15:55 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:15:57 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (150.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1856ms (Views: 1851.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:16:07 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"utMuSwyCW3kikfT/wgUzjpQtQe0FKF7kydLFBJbMzBKo6rLhe1zfjfvPY71aLWlJaUXTHKfavtWtkADEdGqp1Q==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1690ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:16:09 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (26.6ms)
+  Rendered welcome/index.html.erb within layouts/application (304.4ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1668ms (Views: 1526.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:17:46 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:17:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (142.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1583ms (Views: 1578.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:24:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (10.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (3.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (29.0ms)
+  Rendered welcome/index.html.erb within layouts/application (321.2ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 5422ms (Views: 5277.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:25:53 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (101.4ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (179.8ms)
+  Rendered welcome/index.html.erb within layouts/application (658.0ms)
+  Rendered nav/_nav.html.erb (9.0ms)
+  Rendered nav/_footer.html.erb (16.0ms)
+Completed 200 OK in 6078ms (Views: 5783.4ms | ActiveRecord: 20.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:27:12 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PmeA8IDCcrjPETOrI2PLMAFFB1KYTl9kgnitBOpAgwOAs/ohHBlurGKwdpsGD4oCUkMhy0+0xMkbZ6xiIWT8ng=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:27:13 +0100
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:27:15 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PmeA8IDCcrjPETOrI2PLMAFFB1KYTl9kgnitBOpAgwOAs/ohHBlurGKwdpsGD4oCUkMhy0+0xMkbZ6xiIWT8ng=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:27:15 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:27:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (263.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1820ms (Views: 1815.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:31:05 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"reBsfo2s2tg51iMs/BWKOgmsDOKluQoVCbFqwNDFhCQm5MXdAgZtItvn0vfzBOXzYXx1kxEIOH0Nf/JEXoa7UA==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2073ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:31:07 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (9.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (25.9ms)
+  Rendered welcome/index.html.erb within layouts/application (312.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (8.0ms)
+Completed 200 OK in 6740ms (Views: 6584.1ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:32:09 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Evvf7QkxGxiC6Ha3Yx0ylsDh7REYoT8elkG/QtrF+3uCsHRDfCgvWn2AIb6lEGZleLYusSZGFVfwjGMN0MJ7ew=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 7.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:33:04 +0100
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:33:04 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Evvf7QkxGxiC6Ha3Yx0ylsDh7REYoT8elkG/QtrF+3uCsHRDfCgvWn2AIb6lEGZleLYusSZGFVfwjGMN0MJ7ew=="}
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Parameters: {"authenticity_token"=>"Evvf7QkxGxiC6Ha3Yx0ylsDh7REYoT8elkG/QtrF+3uCsHRDfCgvWn2AIb6lEGZleLYusSZGFVfwjGMN0MJ7ew=="}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Redirected to http://localhost:3000/
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 2.0ms)
+
+
+Completed 302 Found in 68ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:33:04 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:33:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (273.4ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:33:15 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Evvf7QkxGxiC6Ha3Yx0ylsDh7REYoT8elkG/QtrF+3uCsHRDfCgvWn2AIb6lEGZleLYusSZGFVfwjGMN0MJ7ew=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 64ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:33:15 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:33:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (143.9ms)
+Completed 200 OK in 12097ms (Views: 12091.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1824ms (Views: 1821.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:33:56 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"774pHqV7J8TyoxeVGN/CZ25vSW9qm4AhEvJ9J5lAghy68BmCOZ+iYv86wEmtyBpD+YQEOeZxVPpBn1UVm/e34g==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1785ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:33:59 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (100.9ms)
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (157.9ms)
+  Rendered welcome/index.html.erb within layouts/application (637.8ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 2059ms (Views: 1908.0ms | ActiveRecord: 19.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-22 23:34:24 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kv7Z1eZFo6Y/sSJroQE2FLWXXr9PG2ffN7h1qyxlt7HQkkZ++nOtXu9rmIa1AcK6r9qT65T/QeljStcUCsKRDQ=="}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:34:24 +0100
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:34:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (175.9ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1960ms (Views: 1952.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-22 23:34:33 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ZZU00MV9fRa7x8dlGl+D76n80YNgVT8+CvWNPmTcWbEpZdhQYfFEnlWQ1EWWJeSARVQT9XHlUzr+8uqVzMPaA==", "user"=>{"email"=>"tester@tester.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tester@tester.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1666ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:34:35 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (11.0ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (29.5ms)
+  Rendered welcome/index.html.erb within layouts/application (323.5ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (15.0ms)
+Completed 200 OK in 1844ms (Views: 1696.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-22 23:34:53 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (191.8ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1829ms (Views: 1621.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-22 23:36:35 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (27.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1658ms (Views: 1481.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/lps/new" for 127.0.0.1 at 2019-01-22 23:47:02 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 8.0ms)
+
+
+  
+NoMethodError (undefined method `lps' for nil:NilClass):
+  
+app/controllers/lps_controller.rb:22:in `new'
+Started GET "/artists/1/lps/new" for 127.0.0.1 at 2019-01-22 23:48:56 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (237.9ms)
+  Rendered lps/new.html.erb within layouts/application (363.7ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 4296ms (Views: 3704.5ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/artists/1/lps" for 127.0.0.1 at 2019-01-22 23:50:45 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Mm4wHbkRZEGyXIkjmK9mmK2OEpvqbfYjaHXU0qOHcBHTcCSHPch3Iv5g7mJ4uYuM4k+eQa9MF1e6efbY9n+XA==", "lp"=>{"name"=>"LP 3", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"1"}, "commit"=>"Create Lp", "artist_id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `lps' for nil:NilClass):
+  
+app/controllers/lps_controller.rb:32:in `create'
+Started POST "/artists/1/lps" for 127.0.0.1 at 2019-01-22 23:51:56 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Mm4wHbkRZEGyXIkjmK9mmK2OEpvqbfYjaHXU0qOHcBHTcCSHPch3Iv5g7mJ4uYuM4k+eQa9MF1e6efbY9n+XA==", "lp"=>{"name"=>"LP 3", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"1"}, "commit"=>"Create Lp", "artist_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 3"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 1], ["created_at", "2019-01-22 22:51:57.024231"], ["updated_at", "2019-01-22 22:51:57.024231"]]
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/1/lps
+Completed 302 Found in 314ms (ActiveRecord: 52.6ms)
+
+
+Started GET "/artists/1/lps" for 127.0.0.1 at 2019-01-22 23:51:57 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered lps/_lp_list.html.erb (38.0ms)
+  Rendered lps/index.html.erb within layouts/application (184.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1799ms (Views: 1608.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/lps" for 127.0.0.1 at 2019-01-22 23:53:25 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered lps/_lp_list.html.erb (16.0ms)
+  Rendered lps/index.html.erb within layouts/application (155.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1646ms (Views: 1489.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1/lps/3/edit" for 127.0.0.1 at 2019-01-22 23:53:41 +0100
+Processing by LpsController#edit as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/edit.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered lps/_form.html.erb (20.0ms)
+  Rendered lps/edit.html.erb within layouts/application (165.9ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1731ms (Views: 1577.1ms | ActiveRecord: 7.0ms)
+
+
+Started PATCH "/artists/1/lps/3" for 127.0.0.1 at 2019-01-22 23:53:48 +0100
+Processing by LpsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gWgHVvlXsXXifMV7pcR2yrfoDkg4N4V4n9T2/YHNY1ERGZkmBGlxHKEMZpojJtZWsTQePG8/xXna80amcMkpAg==", "lp"=>{"name"=>"LP 3", "description"=>"Loremm Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"1"}, "commit"=>"Update Lp", "artist_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (10.1ms)[0m  [1m[33mUPDATE "lps" SET "description" = ?, "updated_at" = ? WHERE "lps"."id" = ?[0m  [["description", "Loremm Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["updated_at", "2019-01-22 22:53:48.779567"], ["id", 3]]
+  [1m[35m (30.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/1/lps
+Completed 302 Found in 116ms (ActiveRecord: 45.5ms)
+
+
+Started GET "/artists/1/lps" for 127.0.0.1 at 2019-01-22 23:53:48 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 1], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered lps/_lp_list.html.erb (22.0ms)
+  Rendered lps/index.html.erb within layouts/application (178.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1743ms (Views: 1584.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-22 23:53:55 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered lps/_lp_list.html.erb (14.0ms)
+  Rendered artists/show.html.erb within layouts/application (136.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (6.0ms)
+Completed 200 OK in 1310ms (Views: 1188.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:54:02 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (9.0ms)
+  Rendered artists/new.html.erb within layouts/application (238.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1750ms (Views: 1610.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-22 23:54:14 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (16.0ms)
+  Rendered artists/index.html.erb within layouts/application (145.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1737ms (Views: 1525.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2019-01-22 23:54:21 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered lps/_lp_list.html.erb (16.0ms)
+  Rendered artists/show.html.erb within layouts/application (187.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1687ms (Views: 1540.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:54:32 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeWEAiS0tV5Mv8ek38yle6j2aDeEwFQxzz+8l5cRSMGiwGuc6iwd+9T1JrmTp+S67jRTpo1mSvCYqeKV+7Z68A==", "artist"=>{"name"=>"Miriam", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Miriam"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:54:32.649241"], ["updated_at", "2019-01-22 22:54:32.649241"]]
+  [1m[35m (34.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/3
+Completed 302 Found in 89ms (ActiveRecord: 46.4ms)
+
+
+Started GET "/artists/3" for 127.0.0.1 at 2019-01-22 23:54:32 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  Rendered artists/show.html.erb within layouts/application (29.2ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1482ms (Views: 1330.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:54:44 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (6.0ms)
+  Rendered artists/new.html.erb within layouts/application (150.9ms)
+  Rendered nav/_nav.html.erb (27.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1660ms (Views: 1529.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:54:53 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wwBcpPEozhw6xIADRtckiLmHM4J1jbyPmmlBh0bVI+NYJbM6P7BmuaKOYR4KvGVJ/0UIE3wrok7N/x+FKnIR0g==", "artist"=>{"name"=>"Ana", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ana"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:54:53.602996"], ["updated_at", "2019-01-22 22:54:53.602996"]]
+  [1m[35m (28.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/4
+Completed 302 Found in 85ms (ActiveRecord: 42.0ms)
+
+
+Started GET "/artists/4" for 127.0.0.1 at 2019-01-22 23:54:53 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  Rendered artists/show.html.erb within layouts/application (27.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 1619ms (Views: 1454.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:54:57 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (10.0ms)
+  Rendered artists/new.html.erb within layouts/application (154.3ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1710ms (Views: 1576.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:55:05 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DJqLOc7H1njKOymJLpdwHyg4Y03V/wS/ttQFK5g+sPSXv2SnAF9+3VJxyJRi/DHebvpY3NxZGn7hQlsp9JmCxQ==", "artist"=>{"name"=>"Alba", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alba"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:55:05.690500"], ["updated_at", "2019-01-22 22:55:05.690500"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/5
+Completed 302 Found in 84ms (ActiveRecord: 38.7ms)
+
+
+Started GET "/artists/5" for 127.0.0.1 at 2019-01-22 23:55:05 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  Rendered artists/show.html.erb within layouts/application (27.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1507ms (Views: 1322.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:55:11 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/new.html.erb within layouts/application (148.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (16.0ms)
+Completed 200 OK in 1643ms (Views: 1510.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:55:17 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z4NQPPu0owR/nLqgOW+uEAh9dE6f5/symyauNaL2QJhUpr+iNSwLoefWW711BO/RTr9P35ZB5fPMsPA3zlFyqQ==", "artist"=>{"name"=>"Cristina", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.7ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cristina"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:55:18.193194"], ["updated_at", "2019-01-22 22:55:18.193194"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/6
+Completed 302 Found in 81ms (ActiveRecord: 38.7ms)
+
+
+Started GET "/artists/6" for 127.0.0.1 at 2019-01-22 23:55:18 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  Rendered artists/show.html.erb within layouts/application (29.0ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1636ms (Views: 1482.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:55:22 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (8.0ms)
+  Rendered artists/new.html.erb within layouts/application (165.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1604ms (Views: 1475.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:55:31 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KHNuBK2L45n+M67q8SCkex7Reb6/Gl5WzY0Tx7jVIFmzVoGaYxNLPGZ5T/e9S+W6WBNCL7a8QJeaG03F1HISaA==", "artist"=>{"name"=>"Jorge", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jorge"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:55:31.964688"], ["updated_at", "2019-01-22 22:55:31.964688"]]
+  [1m[35m (31.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/7
+Completed 302 Found in 86ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/artists/7" for 127.0.0.1 at 2019-01-22 23:55:32 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  Rendered artists/show.html.erb within layouts/application (26.6ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1489ms (Views: 1332.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:55:38 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.0ms)
+  Rendered artists/new.html.erb within layouts/application (150.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1632ms (Views: 1500.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:55:46 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vZa3NUE2/wKtgmz0rf5tv36K7CQnmLjU7JKp+grTMNIms1irj65XpzXIjenhlSx+OEjXtS4+phW7BPf4ZnQC4w==", "artist"=>{"name"=>"Merce", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Merce"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:55:46.821537"], ["updated_at", "2019-01-22 22:55:46.821537"]]
+  [1m[35m (290.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/8
+Completed 302 Found in 339ms (ActiveRecord: 296.3ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2019-01-22 23:55:47 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (28.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1581ms (Views: 1420.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:55:53 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (6.0ms)
+  Rendered artists/new.html.erb within layouts/application (144.7ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1626ms (Views: 1501.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:56:01 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6V5Zyl4zMiBIffdByt45nuShRD1h0/A4U1cgMQGa/mtye7ZUkKuahdA3FlyGtXhfomN/rGh17vkEwX4zbT3MWg==", "artist"=>{"name"=>"Alfonso", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alfonso"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:56:02.170653"], ["updated_at", "2019-01-22 22:56:02.170653"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/9
+Completed 302 Found in 83ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/artists/9" for 127.0.0.1 at 2019-01-22 23:56:02 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  Rendered artists/show.html.erb within layouts/application (28.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1589ms (Views: 1445.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2019-01-22 23:56:05 +0100
+Processing by ArtistsController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (9.0ms)
+  Rendered artists/new.html.erb within layouts/application (150.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1665ms (Views: 1527.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2019-01-22 23:56:14 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nAI3Dv+4hZDgJMtryqqI1nISfylUkMId0nzx1cy9To4HJ9iQMSAtNXhuKnaGwckXNNBEuF023NyF6q/XoBp8vw==", "artist"=>{"name"=>"Enrique", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}, "commit"=>"Create Artist"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (29.1ms)[0m  [1m[32mINSERT INTO "artists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Enrique"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["created_at", "2019-01-22 22:56:14.433633"], ["updated_at", "2019-01-22 22:56:14.433633"]]
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/10
+Completed 302 Found in 124ms (ActiveRecord: 71.0ms)
+
+
+Started GET "/artists/10" for 127.0.0.1 at 2019-01-22 23:56:14 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/show.html.erb within layouts/application (30.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1523ms (Views: 1372.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-22 23:56:20 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (42.0ms)
+  Rendered artists/index.html.erb within layouts/application (183.9ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1674ms (Views: 1539.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists/3/lps/new" for 127.0.0.1 at 2019-01-22 23:56:34 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (11.0ms)
+  Rendered lps/new.html.erb within layouts/application (149.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1668ms (Views: 1519.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists/3/lps" for 127.0.0.1 at 2019-01-22 23:56:44 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7O5W3FUFqJq2GSyruHtls9DfKtRLMcGYROPvyykVfH2g1RTcFLQH5YAJr2IyOpSPSYXf/iIEhMNDK0lEPiH7AQ==", "lp"=>{"name"=>"LP 4", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"3"}, "commit"=>"Create Lp", "artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 4"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 3], ["created_at", "2019-01-22 22:56:44.536929"], ["updated_at", "2019-01-22 22:56:44.536929"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/3/lps
+Completed 302 Found in 99ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/artists/3/lps" for 127.0.0.1 at 2019-01-22 23:56:44 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 3], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  Rendered lps/_lp_list.html.erb (15.0ms)
+  Rendered lps/index.html.erb within layouts/application (156.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1644ms (Views: 1493.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/3" for 127.0.0.1 at 2019-01-22 23:56:54 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  Rendered lps/_lp_list.html.erb (18.0ms)
+  Rendered artists/show.html.erb within layouts/application (190.8ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (15.0ms)
+Completed 200 OK in 1714ms (Views: 1572.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/3/lps/new" for 127.0.0.1 at 2019-01-22 23:57:01 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (9.0ms)
+  Rendered lps/new.html.erb within layouts/application (152.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (12.0ms)
+Completed 200 OK in 1646ms (Views: 1509.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists/3/lps" for 127.0.0.1 at 2019-01-22 23:57:07 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PanFj2xMoPvkA+dmWXtY+t6922ILFNwS7h6uIYJC6PlxkoePLf0PhNITZK/TOqnGR+cuSGIhmUnp1giulXZvhQ==", "lp"=>{"name"=>"LP 5", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"3"}, "commit"=>"Create Lp", "artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.1ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 5"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 3], ["created_at", "2019-01-22 22:57:08.277784"], ["updated_at", "2019-01-22 22:57:08.277784"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/3/lps
+Completed 302 Found in 102ms (ActiveRecord: 38.0ms)
+
+
+Started GET "/artists/3/lps" for 127.0.0.1 at 2019-01-22 23:57:08 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 3], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  Rendered lps/_lp_list.html.erb (22.7ms)
+  Rendered lps/index.html.erb within layouts/application (165.6ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1647ms (Views: 1491.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:57:17 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered artists/_artist_list.html.erb (13.0ms)
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (50.9ms)
+  Rendered welcome/index.html.erb within layouts/application (385.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 2070ms (Views: 1904.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-22 23:57:49 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (45.0ms)
+  Rendered artists/index.html.erb within layouts/application (186.9ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1712ms (Views: 1580.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-22 23:59:06 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/_artist_list.html.erb (162.9ms)
+  Rendered artists/index.html.erb within layouts/application (307.8ms)
+Completed 500 Internal Server Error in 1121ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lps' for nil:NilClass):
+     6:         <div class="card-header bg-purple2 text-white">
+     7:           <%= fa_icon 'user' %> <%= artist.name %>
+     8:           <span class="badge badge-info badge-pill">
+     9:             <%= @artist.lps.count %> LPs stored
+    10:           </span>
+    11: 
+    12:           <%= link_to artist, class: "btn btn-sm btn-info" do %>
+  
+app/views/artists/_artist_list.html.erb:9:in `block in _app_views_artists__artist_list_html_erb__672574686_96889092'
+app/views/artists/_artist_list.html.erb:3:in `_app_views_artists__artist_list_html_erb__672574686_96889092'
+app/views/artists/index.html.erb:7:in `_app_views_artists_index_html_erb__525835078_96910284'
+Started GET "/artists" for 127.0.0.1 at 2019-01-23 00:00:07 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (152.9ms)
+  Rendered artists/index.html.erb within layouts/application (295.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1883ms (Views: 1715.8ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-23 00:00:26 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (147.9ms)
+  Rendered artists/index.html.erb within layouts/application (290.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1915ms (Views: 1734.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/artists/5/lps/new" for 127.0.0.1 at 2019-01-23 00:01:09 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (33.0ms)
+  Rendered lps/new.html.erb within layouts/application (209.9ms)
+  Rendered nav/_nav.html.erb (15.0ms)
+  Rendered nav/_footer.html.erb (15.0ms)
+Completed 200 OK in 2366ms (Views: 2127.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/10" for 127.0.0.1 at 2019-01-23 00:01:31 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/show.html.erb within layouts/application (32.0ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1569ms (Views: 1428.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-23 00:01:40 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (157.5ms)
+  Rendered artists/index.html.erb within layouts/application (332.4ms)
+  Rendered nav/_nav.html.erb (9.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 2034ms (Views: 1787.4ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/artists/5/lps" for 127.0.0.1 at 2019-01-23 00:01:49 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I0xlF0RnqNxrSUCZ4PRvjLkem8YaGjWTJWMviwVoAxOMyB1FLnTMkeZ5sQTndDQ46CGd9XMOshb2Kx8DLD/gjw==", "lp"=>{"name"=>"LP 6", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"5"}, "commit"=>"Create Lp", "artist_id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.1ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 6"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 5], ["created_at", "2019-01-22 23:01:49.860745"], ["updated_at", "2019-01-22 23:01:49.860745"]]
+  [1m[35m (24.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/5/lps
+Completed 302 Found in 95ms (ActiveRecord: 36.1ms)
+
+
+Started GET "/artists/5/lps" for 127.0.0.1 at 2019-01-23 00:01:49 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"5"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 5], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  Rendered lps/_lp_list.html.erb (24.0ms)
+  Rendered lps/index.html.erb within layouts/application (166.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1695ms (Views: 1541.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists/4" for 127.0.0.1 at 2019-01-23 00:02:19 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35mCACHE  (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  Rendered artists/show.html.erb within layouts/application (29.1ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (8.0ms)
+Completed 200 OK in 1718ms (Views: 1515.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/artists/4/lps/new" for 127.0.0.1 at 2019-01-23 00:02:23 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"4"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (7.0ms)
+  Rendered lps/new.html.erb within layouts/application (139.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1735ms (Views: 1542.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/5/lps/new" for 127.0.0.1 at 2019-01-23 00:02:30 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"5"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (13.0ms)
+  Rendered lps/new.html.erb within layouts/application (165.9ms)
+  Rendered nav/_nav.html.erb (21.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 2151ms (Views: 1971.7ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/artists/4/lps" for 127.0.0.1 at 2019-01-23 00:02:39 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"70+09RAzlZTbpwtEjJAH5vaqjRpIB2hCskQEHXvQRPpAy8yneiDx2VaX+tmLEFxSp5WLKSET78dhDDSVUoenZg==", "lp"=>{"name"=>"LP 7", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"4"}, "commit"=>"Create Lp", "artist_id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.1ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 7"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 4], ["created_at", "2019-01-22 23:02:40.083766"], ["updated_at", "2019-01-22 23:02:40.083766"]]
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/4/lps
+Completed 302 Found in 95ms (ActiveRecord: 37.1ms)
+
+
+Started GET "/artists/4/lps" for 127.0.0.1 at 2019-01-23 00:02:40 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 4], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  Rendered lps/_lp_list.html.erb (16.0ms)
+  Rendered lps/index.html.erb within layouts/application (165.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1656ms (Views: 1492.7ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/artists/5/lps" for 127.0.0.1 at 2019-01-23 00:02:49 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hv5nedMScEx3EwgGeR3wpH5MRZhpA32x0IvQVdzZyUixeh8ruQEUAfoj+Zt+nasQL3NDqwAX+jQDw+Dd9Y4q1A==", "lp"=>{"name"=>"LP 8", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"5"}, "commit"=>"Create Lp", "artist_id"=>"5"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 8"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 5], ["created_at", "2019-01-22 23:02:49.931481"], ["updated_at", "2019-01-22 23:02:49.931481"]]
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/5/lps
+Completed 302 Found in 97ms (ActiveRecord: 36.0ms)
+
+
+Started GET "/artists/5/lps" for 127.0.0.1 at 2019-01-23 00:02:50 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"5"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 5], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  Rendered lps/_lp_list.html.erb (29.0ms)
+  Rendered lps/index.html.erb within layouts/application (226.9ms)
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (17.0ms)
+Completed 200 OK in 1936ms (Views: 1782.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/artists/7/lps/new" for 127.0.0.1 at 2019-01-23 00:02:57 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"7"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started GET "/artists/8/lps/new" for 127.0.0.1 at 2019-01-23 00:02:59 +0100
+  Rendering lps/new.html.erb within layouts/application
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"8"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lps/_form.html.erb (14.0ms)
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered lps/new.html.erb within layouts/application (222.9ms)
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (16.0ms)
+  Rendered lps/new.html.erb within layouts/application (158.8ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+Completed 200 OK in 3672ms (Views: 3467.2ms | ActiveRecord: 4.0ms)
+
+
+  Rendered nav/_nav.html.erb (8.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 2536ms (Views: 2337.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/artists/9/lps/new" for 127.0.0.1 at 2019-01-23 00:03:11 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (11.0ms)
+  Rendered lps/new.html.erb within layouts/application (139.4ms)
+Started GET "/artists/10/lps/new" for 127.0.0.1 at 2019-01-23 00:03:13 +0100
+Processing by LpsController#new as HTML
+  Parameters: {"artist_id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering lps/new.html.erb within layouts/application
+  Rendered lps/_form.html.erb (12.0ms)
+  Rendered lps/new.html.erb within layouts/application (140.9ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (24.0ms)
+Completed 200 OK in 3643ms (Views: 3442.0ms | ActiveRecord: 2.0ms)
+
+
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 2486ms (Views: 2207.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/artists/7/lps" for 127.0.0.1 at 2019-01-23 00:03:24 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNxNwpDjaZLEOLwvbYiVGNtRwogMRoqb+lXuIQRuc9EXWDWQ+vAN30kITbJqCM6sim7Eu2VSDR4pHd6pLTmQTQ==", "lp"=>{"name"=>"LP 9", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"7"}, "commit"=>"Create Lp", "artist_id"=>"7"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 9"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 7], ["created_at", "2019-01-22 23:03:25.174471"], ["updated_at", "2019-01-22 23:03:25.174471"]]
+  [1m[35m (26.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/7/lps
+Completed 302 Found in 106ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/artists/7/lps" for 127.0.0.1 at 2019-01-23 00:03:25 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 7], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  Rendered lps/_lp_list.html.erb (22.0ms)
+  Rendered lps/index.html.erb within layouts/application (211.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+Completed 200 OK in 2221ms (Views: 1967.7ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/artists/8/lps" for 127.0.0.1 at 2019-01-23 00:03:31 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QgrN18hIHvSTFK6TZGzRjLdyWV2fSeIX19FiAkK3WNPtjrWFolt6uR4kXw5j7Io45k1fbvZdZZIEmVKKa+C7Tw==", "lp"=>{"name"=>"LP 10", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"8"}, "commit"=>"Create Lp", "artist_id"=>"8"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (5.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 10"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 8], ["created_at", "2019-01-22 23:03:31.884700"], ["updated_at", "2019-01-22 23:03:31.884700"]]
+  [1m[35m (34.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/8/lps
+Completed 302 Found in 110ms (ActiveRecord: 53.0ms)
+
+
+Started GET "/artists/8/lps" for 127.0.0.1 at 2019-01-23 00:03:31 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"8"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  Rendered lps/_lp_list.html.erb (18.0ms)
+  Rendered lps/index.html.erb within layouts/application (345.8ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (13.0ms)
+Completed 200 OK in 2075ms (Views: 1905.3ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/artists/9/lps" for 127.0.0.1 at 2019-01-23 00:03:37 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tHTxfXj2HpOxNnb2zL10k/96bbd6KvE+5IXwt1rsOpIb8IkvEuV63jwGh2vLPS8nrkVrhBM+drs3zcA/c7vZDg==", "lp"=>{"name"=>"LP 11", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"9"}, "commit"=>"Create Lp", "artist_id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 11"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 9], ["created_at", "2019-01-22 23:03:37.878995"], ["updated_at", "2019-01-22 23:03:37.878995"]]
+  [1m[35m (30.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/9/lps
+Completed 302 Found in 105ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/artists/9/lps" for 127.0.0.1 at 2019-01-23 00:03:37 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"9"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (3.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 9], ["LIMIT", 1]]
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  Rendered lps/_lp_list.html.erb (21.0ms)
+  Rendered lps/index.html.erb within layouts/application (197.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 2151ms (Views: 1894.7ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/artists/10/lps" for 127.0.0.1 at 2019-01-23 00:03:49 +0100
+Processing by LpsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q1FCx1qFomZFmBIujVNUdmhHGgMDAPto59IZfP4vFJLs1TqVMJbGK8io47OK0w/COXgcMGoUfO00min013j3Dg==", "lp"=>{"name"=>"LP 13", "description"=>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "artist_id"=>"10"}, "commit"=>"Create Lp", "artist_id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.0ms)[0m  [1m[32mINSERT INTO "lps" ("name", "description", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "LP 13"], ["description", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["artist_id", 10], ["created_at", "2019-01-22 23:03:50.086164"], ["updated_at", "2019-01-22 23:03:50.086164"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/artists/10/lps
+Completed 302 Found in 104ms (ActiveRecord: 44.0ms)
+
+
+Started GET "/artists/10/lps" for 127.0.0.1 at 2019-01-23 00:03:50 +0100
+Processing by LpsController#index as HTML
+  Parameters: {"artist_id"=>"10"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering lps/index.html.erb within layouts/application
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" WHERE "lps"."artist_id" = ? ORDER BY "lps"."id" ASC LIMIT ?[0m  [["artist_id", 10], ["LIMIT", 1]]
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered lps/_lp_list.html.erb (20.0ms)
+  Rendered lps/index.html.erb within layouts/application (164.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1685ms (Views: 1535.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:04:22 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (48.0ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (44.9ms)
+  Rendered welcome/index.html.erb within layouts/application (415.4ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 2026ms (Views: 1864.6ms | ActiveRecord: 13.0ms)
+
+
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArtist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLp Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "lps" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps"[0m
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" LIMIT ? OFFSET ?[0m  [["LIMIT", 12], ["OFFSET", 0]]
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:08:58 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (392.7ms)
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (195.9ms)
+  Rendered welcome/index.html.erb within layouts/application (1079.8ms)
+  Rendered nav/_nav.html.erb (7.0ms)
+  Rendered nav/_footer.html.erb (14.0ms)
+Completed 200 OK in 5731ms (Views: 5391.7ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:10:12 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (52.7ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (56.0ms)
+  Rendered welcome/index.html.erb within layouts/application (408.2ms)
+  Rendered nav/_nav.html.erb (5.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 1878ms (Views: 1724.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-01-23 00:10:26 +0100
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 5]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (159.8ms)
+  Rendered artists/index.html.erb within layouts/application (310.7ms)
+  Rendered nav/_nav.html.erb (6.0ms)
+  Rendered nav/_footer.html.erb (11.0ms)
+Completed 200 OK in 2018ms (Views: 1848.6ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/lps/all" for 127.0.0.1 at 2019-01-23 00:10:53 +0100
+Processing by LpsController#all as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 23ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Artist with 'id'=):
+  
+app/controllers/lps_controller.rb:71:in `set_artist'
+Started GET "/lps/all" for 127.0.0.1 at 2019-01-23 00:12:35 +0100
+Processing by LpsController#all as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lps/all.html.erb within layouts/application
+  [1m[36mLp Load (2.0ms)[0m  [1m[34mSELECT "lps".* FROM "lps"[0m
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (276.0ms)
+  Rendered lps/all.html.erb within layouts/application (404.9ms)
+  Rendered nav/_nav.html.erb (4.0ms)
+  Rendered nav/_footer.html.erb (9.0ms)
+Completed 200 OK in 1925ms (Views: 1650.7ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 00:13:06 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "lps" WHERE "lps"."artist_id" = ?[0m  [["artist_id", 10]]
+  Rendered artists/_artist_list.html.erb (62.4ms)
+  [1m[36mLp Load (1.0ms)[0m  [1m[34mSELECT  "lps".* FROM "lps" ORDER BY "lps"."id" DESC LIMIT ?[0m  [["LIMIT", 3]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered lps/_lp_list.html.erb (49.2ms)
+  Rendered welcome/index.html.erb within layouts/application (419.4ms)
+  Rendered nav/_nav.html.erb (3.0ms)
+  Rendered nav/_footer.html.erb (10.0ms)
+Completed 200 OK in 1983ms (Views: 1816.8ms | ActiveRecord: 11.0ms)
+
+

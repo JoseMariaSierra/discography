@@ -31,12 +31,16 @@
     <div class="card-header bg-purple text-white">
       <span><h3 class="header"><%= fa_icon 'music' %> All his works</h3></span>
     </div>
-    <div class="card-body">
+    <div class="card-body" id="lp_list">
   		<%= render 'lps/lp_list', lps: @artist.lps, artist: @artist %> 
     </div>
   </div>
 <% else %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
     This artist does not have works yet
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <% end %>
 

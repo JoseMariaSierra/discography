@@ -5,6 +5,9 @@
       <div class="card">
         <div class="card-header bg-purple2 text-white">
           <%= fa_icon 'user' %> <%= artist.name %>
+          <span class="badge badge-primary badge-pill">
+            <%= artist.lps.count %> LPs stored
+          </span>
 
           <%= link_to artist, class: "btn btn-sm btn-info" do %>
             <%= fa_icon 'eye' %> Show

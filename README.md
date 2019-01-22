@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.3.3p222
+* Rails version: Rails 5.1.6.1
+* NodeJS version: v11.6.0
+* Bootstrap: 4
+* JQuery: 3.3.1
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Database creation & Database initialization, if you want to delete the uploaded data base.
+	1- rake db:create
+	2- rake db:migrate
+	3- rake db:seeds 
 
 * Deployment instructions
-
-* ...
+	rails s -p [PORT]

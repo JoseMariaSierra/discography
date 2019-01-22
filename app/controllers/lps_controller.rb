@@ -1,6 +1,6 @@
 class LpsController < ApplicationController
   before_action :set_lp, only: [:show, :edit, :update, :destroy]
-  before_action :set_artist, only: [:show, :edit, :update, :destroy]
+  before_action :set_artist, only: [:show, :edit, :update, :destroy, :new, :create]
 
   # GET /lps
   # GET /lps.json
